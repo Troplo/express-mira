@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "mira",
+    "password": "4ot4et89eruiw@jfoiadjAIjdasdASdasg4$@",
+    "database": "mira",
+    "host": "192.168.0.13",
+    "dialect": "mysql",
+    "quoteIdentifiers": false
+  },
+  "test": {
+    "username": "mira",
+    "password": "4ot4et89eruiw@jfoiadjAIjdasdASdasg4$@",
+    "database": "mira",
+    "host": "192.168.0.13",
+    "dialect": "mysql",
+    "quoteIdentifiers": false
+  },
+  "production": {
+    "username": "mira",
+    "password": "4ot4et89eruiw@jfoiadjAIjdasdASdasg4$@",
+    "database": "mira",
+    "host": "192.168.0.13",
+    "dialect": "mysql",
+    "quoteIdentifiers": false
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "mira",
+  "main": "index.js",
+  "license": "No license specified.",
+  "scripts": {
+    "serve": "nodemon --ignore ./ui/"
+  },
+  "dependencies": {
+    "@ridi/epub-parser": "^0.7.4-alpha.1",
+    "argon2": "^0.28.2",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.3.0",
+    "nodemon": "^2.0.12",
+    "path": "^0.12.7",
+    "querystring": "^0.2.1",
+    "sequelize": "^6.6.5",
+    "sequelize-cli": "^6.2.0"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "port": "23983",
+  "jwt": "replaceMe",
+  "library": "./library/",
+  "covers": "./library/covers/",
+  "registrations": true
+}
