@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         authors: {
             type: DataTypes.JSON,
-            allowNull: false
+            defaultValue: []
         },
         date: {
             type: DataTypes.DATE
@@ -39,6 +39,10 @@ module.exports = (sequelize, DataTypes) => {
         },
         description: {
             type: DataTypes.TEXT
+        },
+        failedParse: {
+            type: DataTypes.BOOLEAN,
+            defaultValue: false
         }
     }, {
         sequelize,

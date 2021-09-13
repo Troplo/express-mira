@@ -24,10 +24,9 @@ router.get("/scan", auth, async(req, res, next) => {
         let files = dirents
             .filter(dirent => dirent.isFile())
             .map(dirent => dirent.name);
-        for (const file of files) {
+        files.forEach((file) => {
             let parser = new EpubParser(config.library + file);
             parser.parse().then((book) => {
-                console.log(book)
                 library.create({
                     id: crypto.createHash('sha256').update(file).digest('hex'),
                     title: book.titles[0],
@@ -36,8 +35,16 @@ router.get("/scan", auth, async(req, res, next) => {
                     date: book.dates[0].value,
                     file: file
                 })
-            });
-        }
+            })
+            .catch((e) => {
+                console.log('Failed to parse, error: ' + e)
+                library.create({
+                    id: crypto.createHash('sha256').update(file).digest('hex'),
+                    failedParse: true,
+                    file: file
+                })
+            })
+        })
         res.json({success: true})
     }
     catch (err) { next(err); }
